@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+
+.menu {
+  position: relative;
+
+  padding: 10px;
+  flex: 1;
+  border-right: 2px solid gray;
+  .links {
+    display: flex;
+
+    flex-direction: column;
+    ul {
+      list-style-type: none;
+      border-bottom: 1px solid gray;
+      border-radius: 4px;
+
+      padding: 15px 0;
+      h4 {
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        color: #a7a2a2;
+        letter-spacing: 2px;
+        font-size: 14px;
+      }
+
+      li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 18px;
+
+        padding-left: 10px;
+        cursor: pointer;
+
+        transition: 0.4s;
+        &:hover {
+          opacity: 0.4;
+        }
+        &:active {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .user {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.not-active {
+  color: $soft-color;
+}
+
+.active {
+  color: rgba(223, 222, 222, 0.249);
+}

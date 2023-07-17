@@ -1,0 +1,91 @@
+@import "../../styles/variables.scss";
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $dark-color;
+  border-bottom: 1px solid gray;
+  padding: 20px;
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: rgba(207, 207, 207, 0.222);
+    border-radius: 8px;
+    padding: 10px 25px;
+
+    color: white;
+    svg {
+      color: black;
+      font-size: 36px;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    color: white;
+
+    .icons {
+      display: flex;
+      gap: 5px;
+
+      .notifications {
+        position: relative;
+        cursor: pointer;
+        
+        span {
+           &:hover svg {
+            transition: 0.4s;
+            opacity: 0.5;
+           }
+          position: absolute;
+          z-index: 5;
+          border: 1px solid black;
+          top: -10px;
+          right: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: red;
+          font-size: 12px;
+          font-weight: bold;
+          background-color: white;
+          width: 24px;
+          height: 24px;
+          padding: 5px;
+          border-radius: 100%;
+        }
+      }
+
+      svg {
+        font-size: 26px;
+      }
+    }
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        background-color: black;
+        border-radius: 100%;
+        padding: 5px;
+      }
+    }
+  }
+
+  svg {
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      transition: 0.4s;
+      opacity: 0.5;
+    }
+  }
+}

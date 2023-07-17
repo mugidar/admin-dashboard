@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+footer {
+  background-color: $dark-color;
+  text-align: center;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+  span {
+    color: $soft-color;
+    text-align: center;
+  }
+}

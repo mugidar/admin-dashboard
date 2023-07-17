@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1;
+  color: $main-color;
+  background-color: $main-bg;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.main_content {
+  flex: 8;
+}
+.container {
+  height: 100%;
+  display: flex;
+}

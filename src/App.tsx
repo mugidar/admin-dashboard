@@ -7,9 +7,19 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Menu from "./components/Menu/Menu";
+import SinglePage from "./components/SinglePage/SinglePage";
+import User from "./pages/user/User";
+import Product from "./pages/product/Product";
+import { QueryClientProvider,QueryClient, } from "@tanstack/react-query";
+
+const queryClient = new QueryClient()
+
 
 function App() {
   const Layout = () => {
+
+
+    
     return (
       <>
         <Header />
@@ -17,7 +27,9 @@ function App() {
           <div className="container">
             <Menu />
             <div className="main_content">
-              <Outlet />
+              <QueryClientProvider client={queryClient}>
+                <Outlet />
+              </QueryClientProvider>
             </div>
           </div>
         </main>
@@ -42,6 +54,14 @@ function App() {
         {
           path: "/products",
           element: <Products />
+        },
+        {
+          path: "/products/:id",
+          element: <Product />
+        },
+        {
+          path: "/users/:id",
+          element: <User />
         }
       ]
     }

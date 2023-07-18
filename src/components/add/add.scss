@@ -1,0 +1,57 @@
+.add {
+  z-index: 555;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.41);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal {
+    z-index: 25252;
+    position: relative;
+    padding: 170px 200px;
+    background-color: rgb(75, 75, 75);
+    .close {
+      cursor: pointer;
+      font-size: 24px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    table {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        td {
+          padding: 0 10px;
+        }
+        input {
+          font-size: 24px;
+          padding: 5px;
+        }
+        font-size: 24px;
+      }
+    }
+    .sendBtn {
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      background-color: rgba(62, 73, 131, 0.681);
+      border: 0;
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
